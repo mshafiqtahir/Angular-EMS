@@ -1,0 +1,22 @@
+<h1>{{ getFullName() }}</h1>
+<img [src]='imagePath'>
+<my-employee></my-employee>
+<br><br>
+<button [disabled]='isDisabled'>Click Me</button>
+<br><br>
+<div bind-innerHtml='badHtml'></div>
+<br>
+<button style="color: red" [style.font-weight]="isBold ? 'bold' : 'normal' ">Style Binding font-weight</button>
+<br><br>
+<button style="color: red" [style.font-size.px]="fontSize">Style Binding Font Size</button>
+<br><br>
+<button [ngStyle]="addStyles()">Style Binding Using ngStyle</button>
+<br><br>
+<button (click)="onClick()">Event Binding</button>
+<br>
+<p>Two way data binding</p>
+Name: <input [value]='name' (input)='name=$event.target.value'/>
+Name: <input [(ngModel)]='name'/>
+<br>
+You entered: {{name}}
+
